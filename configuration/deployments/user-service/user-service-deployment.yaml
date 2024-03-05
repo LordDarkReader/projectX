@@ -14,7 +14,7 @@ spec:
         app: user-service
     spec:
       containers:
-        - image: user-service:0.0.1
+        - image: dev.local/user-service:0.0.1
           imagePullPolicy: Never
           name: user-service
           ports:
