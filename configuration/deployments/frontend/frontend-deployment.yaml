@@ -14,7 +14,7 @@ spec:
         app: frontend
     spec:
       containers:
-        - image: dev.local/user-service:0.0.1
+        - image: dev.local/frontend:0.0.1
           imagePullPolicy: Never
           name: frontend
           ports:
