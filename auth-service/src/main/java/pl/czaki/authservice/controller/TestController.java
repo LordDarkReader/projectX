@@ -1,2 +1,13 @@
-package pl.czaki.authservice.controller;public class TestController {
+package pl.czaki.authservice.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TestController {
+
+    @GetMapping
+    public String test() {
+        return "OK";
+    }
 }

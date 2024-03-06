@@ -14,7 +14,7 @@ spec:
         app: auth-service
     spec:
       containers:
-        - image: auth-service:0.0.1
+        - image: dev.local/auth-service:0.0.1
           name: auth-service
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
