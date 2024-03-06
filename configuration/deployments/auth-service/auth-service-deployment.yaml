@@ -15,6 +15,7 @@ spec:
     spec:
       containers:
         - image: dev.local/auth-service:0.0.1
+          imagePullPolicy: Never
           name: auth-service
           ports:
             - containerPort: 8081
