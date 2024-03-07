@@ -1,8 +1,8 @@
 package pl.czaki.userservice.controller;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import pl.czaki.userservice.model.User;
 import pl.czaki.userservice.service.TestService;
 
 @RestController
@@ -22,5 +22,15 @@ public class TestController {
     @GetMapping(value = "/message-test")
     public ResponseEntity<String> getTestMessageFromAuthService() {
         return service.getTestMessageFromAuthService();
+    }
+
+    @GetMapping(value = "/user-info")
+    public User getUserInfo(@RequestParam String login) {
+        return service.getUserInfo(login);
+    }
+
+    @PostMapping(value = "/user-add")
+    public ResponseEntity<String> getAddUser(@RequestBody User user) {
+        return service.addUser(user);
     }
 }
