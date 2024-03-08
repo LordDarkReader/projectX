@@ -6,6 +6,7 @@ import pl.czaki.userservice.model.User;
 import pl.czaki.userservice.service.TestService;
 
 @RestController
+@CrossOrigin
 public class TestController {
 
     private final TestService service;
